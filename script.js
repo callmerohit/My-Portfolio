@@ -49,7 +49,7 @@ function  openMailBox() {
 
 //myResume
 resumeBtn.addEventListener("click",()=>{
-    let myResume = "resume.pdf";
+    let myResume = "myResume.pdf";
     window.open(myResume);
 });
 
