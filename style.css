@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(236, 231, 231);
+}
+@keyframes slideDownNavbar {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+.navbar{
+    height: 85px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: slideDownNavbar 0.7s  linear;
+    position: fixed;
+    z-index: 1000;
+}
+.navelements{
+    color: #560bad;
+    height: 40px;
+    top: 20px;
+    right: 10%;
+    display: flex;
+}
+.navButton{
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    text-decoration: none;
+    color: #560bad;
+    bottom: 5px;
+    left: 50rem;
+    margin:0px 40px 0px 50px ;
+    cursor:pointer;
+}
+#navName{
+    font-family: serif;
+    text-decoration: none;
+    color: #560bad;
+    margin: 100px 50 4px 50px;
+    padding: 5px 5px 5px 5px;
+    font-size: 30px;
+    position: relative;
+    top: 26px;
+    left: 50px;
+}
+#modeButton{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 20px;
+    height:35px;
+    width: 35px;
+    background-color: #560bad;
+    border: 2px solid black;
+    border-radius:20px ;
+    cursor:pointer;
+}
+#modeButton:active{
+    transform: translateY(3px);
+    transition-duration: 0.2s;
+}
+.nameIntro{
+    height: 180px;
+    text-align: center;
+    position: relative;
+    top: 250px;
+}
+@keyframes fadeIn {
+    from {
+      transform: translateZ(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+#name{
+    color: #560bad;
+    font-size: 65px;
+    font-family:serif ;
+    position: relative;
+    top: 40px;
+    animation: fadeIn 2s ease-in;
+}
+#intro{
+    color: #353535;
+    font-size: 20px;
+    font-family:sans-serif ;
+    position: relative;
+    top: 40px;
+    animation: fadeIn 2s ease-in;
+}
+@keyframes linkBox {
+    from{transform: translateX(-110px);}
+    to{transform: translateX(0px);}
+}
+.linkBox{
+    font-size: 35px;
+    height: 200px;
+    width: 60px;
+    background-color: #ffffff;
+    position: relative;
+    top: 100px;
+    border-radius: 5px;
+    animation: linkBox 1.5s linear;
+}
+.linkBox:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.links{
+    color: #560bad;
+    position: relative;
+    top: 20px;
+    left: 12px;
+}
+.links:hover{
+    transform: translateX(10px);
+}
+.projectButton{
+    text-align: center;
+    position: relative;
+    margin-top: 150px;
+}
+#projectButton{
+    font-size: 30px;
+    background-color: #560bad;
+    color: #ffffff;
+    border: none;
+    padding: 7px 15px 7px 15px;
+    border-radius: 10px;
+    cursor:pointer;
+    animation: fadeIn 2s ease-in;
+}
+#projectButton:hover{
+    transform: translateY(-1px);
+    transition-duration: 0.2s ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#projectButton:active{
+    transform: translateY(0px);
+    transition-duration: 0.2s;
+}
+.aboutSection{
+    z-index: 900;
+    text-align: center;
+    margin-top: 110px;
+}
+#aboutMe{
+    font-size: 35px;
+    color: #560bad;
+    margin-bottom: 5px;
+}
+#aboutIntro{
+    font-size: 20px;
+    color: #353535;     
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+.knowMe{
+    height: 500px;
+    width: 600px;
+    margin-left: 30px;
+    display: inline-block;
+}
+#knowHead{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 100px;
+    font-size: 35px;
+    color: #560bad;
+}
+#knowIntro{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #353535;
+    line-height: 37px;
+}
+.skillBox{
+    height: 500px;
+    width: 600px;
+    display: inline-block;
+    margin-left: 150px;
+    margin-top: 20px;
+    position: absolute;
+    text-align: center;
+}
+.skillHead{
+    height: 500px;
+    width: 300px;
+    color: #560bad;
+    position: absolute;
+    margin-left: 150px;
+}
+.skills{
+    width: 200px;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 200px;
+}
+.skill{
+    background-color:  #ffffff;
+    color: #353535;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.prjSection{
+    margin-top: 105px;
+}
+.prjHead{
+    color: #560bad;
+    font-size: 18px;
+    text-align: center;
+}
+#prjIntro{
+    font-size: 20px;
+    color: #353535;
+    margin-top: 5px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+.prjImages{
+    height: 400px;
+    width: 600px;
+    margin: 0 0 200px 120px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #B5179E;
+}
+.prjImages:hover{
+    box-shadow: 0 0 10px #560bad;
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+.prjDes{
+    height: 190px;
+    width: 600px;
+    line-height: 25px;
+    display: inline-block;
+    margin: 95px 0 0 100px ;
+    position: absolute;
+    text-align: center;
+    background-color:  #ffffff;
+    box-shadow: 0 0 10px #B5179E;
+    border-radius: 15px;
+}
+.desPar{
+    font-size: 23px;
+    color: #353535;
+}
+.explore{
+    height: 50px;
+    width: 200px;
+    display: inline-block;
+    margin: 320px 0 0 300px ;
+    position: absolute;
+    text-align: center;
+}
+.expBtn{
+    font-size: 25px;
+    background-color:  #560bad;
+    box-shadow: 0 0 10px #B5179E;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.expBtn:hover{
+    transform: translateY(-1px);
+    transition-duration: 0.2s ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.expBtn:active{
+    transform: translateY(0px);
+    transition-duration: 0.2s ;
+}
+@keyframes arwAnimation{
+    from{transform: translateX(-25px);
+    opacity: 0.1;
+    }
+    to{transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+.arwRight{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 180px;
+    font-size: 30px;    
+    color: #560bad;
+    animation:arwAnimation 2.5s infinite alternate;
+}
+
+.ContactMeSection{
+    text-align: center;
+    margin-top: 30px;
+}
+.contHead{
+    color: #560bad;
+    font-size: 35px;
+    text-align: center;
+}
+.contPara{
+    font-size: 20px;
+    color: #353535;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.contButtonBox{
+    height: 100px;
+    margin-bottom: 60px;
+}
+.contMeBtn{
+    font-size: 25px;
+    background-color:  #560bad;
+    box-shadow: 0 0 10px #B5179E;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    cursor:pointer;
+    position: relative;
+    top: 2rem;
+    right: 3rem;
+}
+.contMeBtn:hover{
+    transform: translateY(-1px);
+    transition-duration: 0.2s ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.contMeBtn:active{
+    transform: translateY(0px);
+    transition-duration: 0.2s ;
+}
+.resumeBtn{
+    font-size: 25px;
+    background-color:  #560bad;
+    box-shadow: 0 0 10px #B5179E;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    cursor:pointer;
+    position: relative;
+    top: 2rem;
+    left: 3rem;
+}
+.resumeBtn:hover{
+    transform: translateY(-1px);
+    transition-duration: 0.2s ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.resumeBtn:active{
+    transform: translateY(0px);
+    transition-duration: 0.2s ;
+}
+.myFooter{
+    height: 290px;
+    width: 100%;
+    margin-top: 80px;
+    background-color: #560bad;
+}
+.footName{
+    display: inline-block;
+    color: #ffffff;
+    font-family: serif;
+    position: relative;
+    top: 35px;
+    left: 250px;
+    font-size: 35px;
+}
+.footIntro{
+    display: inline-block;
+    color: #ffffff;
+    position: relative;
+    top: 90px;    
+    left: 45px;
+}
+.footLinks{
+margin-left: 67rem;
+}
+.linkHead{
+    color: #ffffff;
+    /* margin-bottom: 10px; */
+    margin-left: 0.5rem;
+}
+.footLink{
+    color: #ffffff;
+    font-size: 35px;
+    margin-left: 10px;
+    /* margin-top: 3rem; */
+}
+.footLink:hover{
+    color: #B5179E;
+}
+.hrLine{
+    margin-left: 12rem;
+    width: 75%;
+    position: relative;
+    top: 100px;
+}
+.copyright{
+    text-align: center;
+    position: relative;
+    top: 125px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+/*  The End */
+@media(max-width:768px){
+    .navbar{
+        width: 100%;
+    }
+    #navName{
+        font-size: 20px;
+    }
+}
