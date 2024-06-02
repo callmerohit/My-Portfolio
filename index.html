@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Kumar</title>
+    <link rel="icon" href="/Images/apple-touch-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     
+</head>
+<body>
+ <header>
+        <nav>
+            <div class="navbar-left">
+                <h1><a href="/">Rohit Kumar</a></h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="navelements" id="navelements">
+                <a href="/" class="navButton">Home</a>
+                <a href="#about" class="navButton">About</a>
+                <a href="#project" class="navButton">Project</a>
+                <a href="#contact" class="navButton">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="home-section" >
+        <div class="home-content">
+            <h1 class="home-name">Hey, I'm Rohit Kumar</h1>
+            <p class="home-intro">I am a Frontend Web Developer <br> building the Frontend of websites that lead to the success of the overall product.</p>
+        </div>
+        <div class="home-btn">
+            <a href="#project"  class="btn">Projects</a>
+        </div>
+    </section>
+
+    <section  id="about" class="about-section" >
+        <h1 class="heading" >About me</h1>
+        <div class="about-intro" >
+            <p class="intro">Hey, My name is Rohit Kumar, I'm a Frontend Web Developer
+                building the Frontend of websites that lead to the success of the overall product.
+                I'm open to job opportunities, I want to work for an organization that enables me to learn, exhibit my professional skills, and contribute towards the organization's goals. 
+                I also worked on some minor projects at the beginning of this journey, and I have mentioned all of those in the project section.</p>
+        </div>
+        <div class="skills">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="/Images/skills/html.png" alt="HTML5">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill">
+                    <img src="/Images/skills/css.png" alt="CSS3">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill">
+                    <img src="/Images/skills/js.png" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill">
+                    <img src="/Images/skills/java.png" alt="Java">
+                    <h3>Java</h3>
+                </div>
+                <div class="skill">
+                    <img src="/Images/skills/github.png" alt="GitHub">
+                    <h3>GitHub</h3>
+                </div>
+                <div class="skill">
+                    <img src="/Images/skills/react.png" alt="React">
+                    <h3>React</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <h2 class="heading">My Projects</h2>
+        <div class="section-intro"><p>Elevating Web Experiences: Unveiling My Latest Project Showcase.</p></div>
+        <div class="projects-container">
+            <div class="project">
+                <img src="/Images/projects/currencyconverter.png" alt="Project 1">
+                <div class="project-info">
+                    <h3>currency converter</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse architecto asperiores, eum magnam distinctio eius. Sed itaque dolores, molestiae, deleniti voluptatum adipisci omnis tenetur laborum officia dolorum officiis nam est.</p>
+                    <a href="" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/Images/projects/currencyconverter.png" alt="Project 1">
+                <div class="project-info">
+                    <h3>currency converter</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse architecto asperiores, eum magnam distinctio eius. Sed itaque dolores, molestiae, deleniti voluptatum adipisci omnis tenetur laborum officia dolorum officiis nam est.</p>
+                    <a href="" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/Images/projects/currencyconverter.png" alt="Project 1">
+                <div class="project-info">
+                    <h3>currency converter</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse architecto asperiores, eum magnam distinctio eius. Sed itaque dolores, molestiae, deleniti voluptatum adipisci omnis tenetur laborum officia dolorum officiis nam est.</p>
+                    <a href="" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/Images/projects/currencyconverter.png" alt="Project 1">
+                <div class="project-info">
+                    <h3>currency converter</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse architecto asperiores, eum magnam distinctio eius. Sed itaque dolores, molestiae, deleniti voluptatum adipisci omnis tenetur laborum officia dolorum officiis nam est.</p>
+                    <a href="" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h1 class="heading">Contact Me</h1>
+    <div><p class="section-intro">Feel welcome to reach out through the 'Send' button <br>below,  and I'll respond to your message at the earliest convenience.</p></div>
+    <form class="contact-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write message here..." name="message" rows="4" required></textarea>
+        </div>
+        <button class="btn" type="submit">Send</button>
+    </form>
+    
+</section>
+
+    <footer>
+        <div class="social-links">
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/callmerohit" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/_rohitkumar?t=d6ePBYxsVar4O1Q92zy_kg&s=09" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div  class="dev-info">
+            <p>&copy; 2024 <a href="">Rohit Kumar</a>. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Include the EmailJS library -->
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('oymatYgpQ0ZUvmdhm')
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
