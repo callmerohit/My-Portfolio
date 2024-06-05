@@ -8,6 +8,8 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+    /* Header Section Start*/
 @keyframes slideDownNavbar {
     from {
       transform: translateY(-100px);
@@ -18,8 +20,19 @@ html {
       opacity: 1;
     }
   }
+  /* Dropdown animation oof navLinks below 768px.*/
+@keyframes dropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 header {
-    height: 85px;
+    height: 80px;
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -28,21 +41,18 @@ header {
     top: 0;
     z-index: 1000;
 }
-
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .navbar-left a {
     margin: 0px 30px;
-    font-size: 35px;
+    font-size: 30px;
     padding: 20px;
     color: #560bad;
     text-decoration: none;
 }
-
 .navelements {
     display: flex;
     align-items: center;
@@ -50,30 +60,31 @@ header nav {
     font-size: 22px;
     gap: 35px;
 }
-
 .navelements a {
     color: #560bad;
+    font-size: 25px;
     text-decoration: none;
     margin-left: 1rem;
     font-weight: bolder;
 }
-
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 20px;
 }
-
 .hamburger div {
     width: 25px;
     height: 3px;
     background-color: #560bad;
     margin: 4px 0;
 }
+/* Header Section Ends*/
+
+    /*Home Section Start */
 .home-section{
     text-align: center;
-    margin-top: 300px;
+    padding-top: 250px;
 }
 .home-name{
     color: #560bad;
@@ -100,46 +111,12 @@ header nav {
 .btn:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
 .home-btn{
     margin-top: 40px;
 }
-footer{
-    height: 220px;
-    background-color: #560bad;
-    text-align: center;
-    margin-top: 100px;
-}
-.social-links a{
-    font-size: 40px;
-    margin-left: 20px;
-    color: #ffffff;
-    position: relative;
-    top: 80px;
+    /*Home Section Ends*/
 
-}
-.dev-info{
-    position: relative;
-    top: 100px;
-    color: #ffffff;
-}
-.dev-info a{
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-/* Dropdown animation */
-@keyframes dropdown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    /* About Section Starts */
 .about-section{
     text-align: center;
     margin-top: 100px;
@@ -165,20 +142,17 @@ footer{
     text-align: center;
     padding: .5rem 1rem;
 }
-
 .skills h2 {
     margin-bottom: 10px;
     font-size: 2rem;
     color: #560bad;
 }
-
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
 }
-
 .skill {
     background-color: #f4f4f4;
     border-radius: 10px;
@@ -188,40 +162,36 @@ footer{
     text-align: center;
     transition: transform 0.3s;
 }
-
 .skill img {
     width: 100px;
     height: 100px;
     margin-bottom: 1rem;
 }
-
 .skill h3 {
     margin: 0;
     color: #333;
     font-size: 25px;
 }
-
 .skill:hover {
     transform: translateY(-10px);
 }
+/* About Section Ends */
 
+    /* Project Section Starts */
 #project {
     text-align: center;
     padding: 2rem 1rem;
 }
-
 #projects h2 {
     margin-bottom: 2rem;
     color: #333;
 }
-
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
 }
-
 .project {
     background-color: #f4f4f4;
     border-radius: 10px;
@@ -232,31 +202,26 @@ footer{
     padding: 5px;
     transition: transform 0.3s;
 }
-
 .project img {
     width: 100%;
     margin-top: 10px;
     height: auto;
 }
-
 .project-info {
     padding: 1rem;
     text-align: left;
 }
-
 .project-info h3 {
     margin: 0 0 0.5rem 0;
     color: #560bad;
     font-size: 20px;
     text-align: center;
 }
-
 .project-info p {
     margin: 0 0 1rem 0;
     color: #333;
     text-align: center;
 }
-
 .project-link {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -268,15 +233,15 @@ footer{
     transition: background-color 0.3s;
     text-align: center;
 }
-
 .project-link:hover {
     background-color: #555;
 }
-
 .project:hover {
     transform: translateY(-10px);
 }
+/* Project Section Ends*/
 
+    /* Contact Section Starts */
 #contact {
     text-align: center;
     padding: 2rem 1rem;
@@ -286,9 +251,6 @@ footer{
     text-align: center;
     font-size: 20px;
 }
-
-
-
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -297,19 +259,16 @@ footer{
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .form-group {
     margin-bottom: 1rem;
     text-align: left;
 }
-
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 20px;
     color: #560bad;
 }
-
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -327,12 +286,39 @@ textarea:focus {
     border: 2px solid #560bad;
     outline: none;  
 }
-/* Responsive styles */
+    /* Contact Section Ends */
+
+    /* Footer Section */
+footer{
+    height: 220px;
+    background-color: #560bad;
+    text-align: center;
+    margin-top: 100px;
+}
+.social-links a{
+    font-size: 40px;
+    margin-left: 20px;
+    color: #ffffff;
+    position: relative;
+    top: 80px;
+}
+.dev-info{
+    position: relative;
+    top: 100px;
+    color: #ffffff;
+}
+.dev-info a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+    /* Footer Section Ends */
+
+    /* Media Queries Starts */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
-
     .navelements {
         display: none;
         flex-direction: column;
@@ -344,18 +330,25 @@ textarea:focus {
         left: 0;
         z-index: 1;
     }
-
+    .navbar-left a {
+        margin: 0px 30px;
+        font-size: 25px;
+        padding: 20px;
+        color: #560bad;
+        text-decoration: none;
+    }
     .navelements a {
         margin: 2px 0;
         padding: 1.5px;
         width: 100%;
-        font-size: 18px;
+        font-size: 20px;
     }
-
     .navelements.show {
         display: flex;
-        height: 230px;
+        height: 240px;
         animation: dropdown 0.3s ease forwards;
+        padding-top: 10px;
+        border-radius: 10px;
     }
     header {
         height: 70px;
@@ -366,8 +359,8 @@ textarea:focus {
         padding: 16px;
     }
     .home-section{
-        margin-top: 180px;
-    }
+        padding-top: 210px;
+        }
     .home-name{
         font-size: 65px;
         margin-bottom: 0px;
@@ -387,6 +380,7 @@ textarea:focus {
     .intro{
         background-color: #fff;
         padding:15px;
+        line-height: 32px;
         border-radius: 10px;
     }
     .skill img {
@@ -414,6 +408,7 @@ textarea:focus {
         .form-group input,
         .form-group textarea {
         font-size: 18px;
-}
+        }
     }
+    /* Media Queries Ends */
 

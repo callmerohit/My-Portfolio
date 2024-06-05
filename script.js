@@ -2,18 +2,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hamburger functionality
     const hamburger = document.getElementById('hamburger');
     const navelements = document.getElementById('navelements');
-
+    const navLinks = document.querySelectorAll('.navButton');
+    // Toggle the dropdown menu
     hamburger.addEventListener('click', function() {
         navelements.classList.toggle('show');
     });
+    // Hide the dropdown menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navelements.classList.remove('show');
+        });
+    });
+    // Hide the dropdown menu on scroll
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth < 768) {
+            navelements.classList.remove('show');
+        }
+    });
 
-    // Form submission
+
+    // Contact Section - Form submission
     const contactForm = document.querySelector('.contact-form'); 
-
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
-
             // Get form data
             const formData = new FormData(contactForm);
             const data = {
@@ -21,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 reply_to: formData.get('email'),
                 message: formData.get('message')
             };
-
             // Send email using EmailJS
             emailjs.send('service_wnsn36o', 'template_cbp4gyc', data)
                 .then(function(response) {
