@@ -82,9 +82,10 @@ header nav {
 /* Header Section Ends*/
 
     /*Home Section Start */
-.home-section{
+.home-section{    
     text-align: center;
     padding-top: 250px;
+    margin-bottom: 150px;
 }
 .home-name{
     color: #560bad;
@@ -359,8 +360,9 @@ footer{
         padding: 16px;
     }
     .home-section{
-        padding-top: 210px;
-        }
+        padding-top: 260px;
+        margin-bottom: 190px;
+    }
     .home-name{
         font-size: 65px;
         margin-bottom: 0px;

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-
+    
     // Contact Section - Form submission
     const contactForm = document.querySelector('.contact-form'); 
     if (contactForm) {
@@ -55,4 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Contact form not found');
     }
+});
+
+
+// Footer Year Updation Function
+document.addEventListener('DOMContentLoaded', function() {
+    const yearSpan = document.getElementById('current-year');
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
 });
