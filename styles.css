@@ -360,8 +360,8 @@ footer{
         padding: 16px;
     }
     .home-section{
-        padding-top: 260px;
-        margin-bottom: 190px;
+        margin-bottom: 300px;
+        padding: 140px 10px 0 10px;
     }
     .home-name{
         font-size: 65px;
