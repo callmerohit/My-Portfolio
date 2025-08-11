@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Header Section Starts -->
- <header>
+   <header>
         <nav>
             <div class="navbar-left">
                 <h1><a href="#home">Rohit Kumar</a></h1>
@@ -27,15 +27,22 @@
                 <a href="#project" class="navButton">Project</a>
                 <a href="#contact" class="navButton">Contact</a>
             </div>
+             <!-- Dark/Light Mode Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
         </nav>
     </header>
+
+
 <!-- Header Section Ends -->
 
 <!-- Home Section Starts -->
     <section class="home-section" id="home">
         <div class="home-content">
-            <h1 class="home-name">Hey, I'm Rohit Kumar</h1>
-            <p class="home-intro">I am a Frontend Web Developer <br> building the Frontend of websites that lead to the success of the overall product.</p>
+            <h1 class="home-name DarkModeIntro">Hey, I'm Rohit Kumar</h1>
+            <p class="home-intro DarkModeIntro">I am a Frontend Web Developer <br> building the Frontend of websites that lead to the success of the overall product.</p>
         </div>
         <div class="home-btn">
             <a href="#project"  class="btn">Projects</a>
@@ -75,10 +82,7 @@
                     <img src="/Images/skills/github.png" alt="GitHub">
                     <h3>GitHub</h3>
                 </div>
-                <div class="skill">
-                    <img src="/Images/skills/react.png" alt="React">
-                    <h3>React</h3>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -87,11 +91,11 @@
 <!-- Project Section Starts -->
     <section id="project">
         <h2 class="heading">My Projects</h2>
-        <div class="section-intro"><p>Elevating Web Experiences: Unveiling My Latest Project Showcase.</p></div>
+        <div class="section-intro DarkModeIntro"><p>Elevating Web Experiences: Unveiling My Latest Project Showcase.</p></div>
         <div class="projects-container">
             <div class="project">
                 <img src="/Images/projects/shabdokibarsaat.png" alt="Project 1">
-                <div class="project-info">
+                <div class="project-info DarkModeIntro">
                     <h3>Shabdo ki Barsaat</h3>
                     <p>I designed a poetry website for a friend that showcases their poems, links to buy their poetry books, and their achievements. This project blends creativity and functionality, offering poetry lovers a beautifully crafted space to explore.</p>
                     <a href="https://shabdokibarsaat.netlify.app/" target="_blank" class="project-link">View Project</a>
@@ -99,7 +103,7 @@
             </div>
             <div class="project">
                 <img src="/Images/projects/rideexchange.png" alt="Project 1">
-                <div class="project-info">
+                <div class="project-info DarkModeIntro">
                     <h3>Ride Exchange</h3>
                     <p>To enhance my skills, I developed a car showroom website featuring detailed car listings, high-quality images, and user-friendly navigation. This project demonstrates my ability to create engaging and intuitive interfaces, effectively showcasing cars for potential buyers.</p>
                     <a href="https://rideexchange.netlify.app/" target="_blank" class="project-link">View Project</a>
@@ -107,7 +111,7 @@
             </div>
             <div class="project">
                 <img src="/Images/projects/stonepaperscissor.png" alt="Project 1">
-                <div class="project-info">
+                <div class="project-info DarkModeIntro">
                     <h3>Stone Paper Scissor</h3>
                     <p>Experience the classic game of Stone, Paper, Scissors in  a modern web format. Enjoy sleek design, intuitive gameplay, and responsive  features a showcase of my coding skills and passion for interactive experiences.</p>
                     <a href="https://callmerohit.github.io/Stone-Paper-Scissor/" target="_blank" class="project-link">View Project</a>
@@ -115,15 +119,15 @@
             </div>
             <div class="project">
                 <img src="/Images/projects/tictactoe.png" alt="Project 1">
-                <div class="project-info">
+                <div class="project-info DarkModeIntro">
                     <h3>Tic Tac Toe</h3>
-                    <p>My project is a user-friendly currency converter web app, enabling seamless conversion between different currencies. It features real-time exchange rates, intuitive design, and showcases my web development and API integration skills.</p>
+                    <p>A simple browser-based Tic Tac Toe game built with HTML, CSS, and JavaScript. Features a clean UI, responsive design, and interactive gameplay with win detection logic.</p>
                     <a href="https://callmerohit.github.io/TicTacToe/" target="_blank" class="project-link">View Project</a>
                 </div>
             </div>
             <div class="project">
                 <img src="/Images/projects/currencyconverter.png" alt="Project 1">
-                <div class="project-info">
+                <div class="project-info DarkModeIntro">
                     <h3>currency converter</h3>
                     <p>My project is a user-friendly currency converter web app, enabling seamless conversion between different currencies. It features real-time exchange rates, intuitive design, and showcases my web development and API integration skills.</p>
                     <a href="https://callmerohit.github.io/CurrencyConverter/" target="_blank" class="project-link">View Project</a>
@@ -137,43 +141,42 @@
 <!-- Contact Section Starts-->
 <section id="contact">
     <h1 class="heading">Contact Me</h1>
-    <div><p class="section-intro">Feel welcome to reach out through the 'Send' button <br>below,  and I'll respond to your message at the earliest convenience.</p></div>
-    <form class="contact-form">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" placeholder="Name" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" placeholder="Email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Write message here..." name="message" rows="4" required></textarea>
-        </div>
-        <button class="btn" type="submit">Send</button>
-    </form>
+    <div><p class="section-intro DarkModeIntro">Feel welcome to reach out through the 'Send' button <br>below,  and I'll respond to your message at the earliest convenience.</p></div>
     
+
+
+
+    <form class="contact-form">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Name" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="title">Subject</label>
+        <input type="text" placeholder="Subject" id="title" name="title" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write message here..." name="message" rows="4" required></textarea>
+    </div>
+
+    <!-- Hidden time field (filled automatically in JS) -->
+    <input type="hidden" name="time">
+
+    <button class="btn" type="submit">Send</button>
+</form> 
 </section>
 <!-- Contact Section Ends-->
 
-<!-- Footer Section Starts-->
-    <!-- <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/rohit-kumar-b402ba297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/callmerohit" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/rohith.02?igsh=NTduMmtyYW5sOXBr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/__rohitkumar_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-        <div  class="dev-info">
-            <p>&copy; 2024 <a href="https://rohit-kumar-netlify.netlify.app/">Rohit Kumar</a>. All rights reserved.</p>
-        </div>
-    </footer> -->
+<!--Footer section starts-->
     <footer>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/rohit-kumar-b402ba297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/callmerohit" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/rohith.02?igsh=NTduMmtyYW5sOXBr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://x.com/__rohitkumar_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
         <div class="dev-info">

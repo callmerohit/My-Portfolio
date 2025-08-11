@@ -1,66 +1,95 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize EmailJS (put your Public Key here)
+    emailjs.init('N9NGr9cZ4-tx16iTh');
+
     // Hamburger functionality
     const hamburger = document.getElementById('hamburger');
     const navelements = document.getElementById('navelements');
     const navLinks = document.querySelectorAll('.navButton');
-    // Toggle the dropdown menu
-    hamburger.addEventListener('click', function() {
+
+    hamburger.addEventListener('click', function () {
         navelements.classList.toggle('show');
     });
-    // Hide the dropdown menu when a link is clicked
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             navelements.classList.remove('show');
         });
     });
-    // Hide the dropdown menu on scroll
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
         if (window.innerWidth < 768) {
             navelements.classList.remove('show');
         }
     });
 
-    
-    // Contact Section - Form submission
-    const contactForm = document.querySelector('.contact-form'); 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+        const icon = themeToggle.querySelector('i');
+        if (body.classList.contains('dark-mode')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Contact Form
+    const contactForm = document.querySelector('.contact-form');
+    if (!contactForm) {
+        console.error('Contact form not found (.contact-form)');
+    } else {
+        const sendBtn = contactForm.querySelector('button[type="submit"]');
+
+        // Set time field automatically
+        const timeField = contactForm.querySelector('input[name="time"]');
+        if (timeField) {
+            timeField.value = new Date().toLocaleString();
+        }
+
+        contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = {
-                from_name: formData.get('name'),
-                reply_to: formData.get('email'),
-                message: formData.get('message')
-            };
-            // Send email using EmailJS
-            emailjs.send('service_wnsn36o', 'template_cbp4gyc', data)
-                .then(function(response) {
+
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS not loaded.');
+                alert('Email service not available.');
+                return;
+            }
+
+            sendBtn.disabled = true;
+            const originalText = sendBtn.textContent;
+            sendBtn.textContent = 'Sending...';
+
+            //Replace with your Service ID and Template ID
+            emailjs.sendForm('service_dmgzjrf', 'template_8ss2xpb', contactForm)
+                .then(() => {
                     alert('Message sent successfully!');
                     contactForm.reset();
-                }, function(error) {
-                    if (error.status === 400) {
-                        alert('Bad Request. Please E-Mail Directly to rohitkumarr2212@gmail.com');
-                    } else if (error.status === 401) {
-                        alert('Unauthorized. Please E-Mail Directly to rohitkumarr2212@gmail.com');
-                    } else if (error.status === 403) {
-                        alert('Forbidden.Please E-Mail Directly to rohitkumarr2212@gmail.com');
-                    } else if (error.status === 404) {
-                        alert('Service not found.Please E-Mail Directly to rohitkumarr2212@gmail.com');
-                    } else {
-                        alert('Failed to send the message. Please try again.');
-                    }
+                })
+                .catch((err) => {
+                    console.error('EmailJS error', err);
+                    alert('Failed to send message. Check console for details.');
+                })
+                .finally(() => {
+                    sendBtn.disabled = false;
+                    sendBtn.textContent = originalText;
                 });
         });
-    } else {
-        console.error('Contact form not found');
     }
-});
 
-
-// Footer Year Updation Function
-document.addEventListener('DOMContentLoaded', function() {
+    // Footer Year Update
     const yearSpan = document.getElementById('current-year');
-    const currentYear = new Date().getFullYear();
-    yearSpan.textContent = currentYear;
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 });
