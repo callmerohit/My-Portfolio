@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize EmailJS (put your Public Key here)
     emailjs.init('N9NGr9cZ4-tx16iTh');
 
     // Hamburger functionality
@@ -8,18 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.navButton');
 
     hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active'); 
         navelements.classList.toggle('show');
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', function () {
             navelements.classList.remove('show');
+            hamburger.classList.remove('active'); 
         });
     });
 
     window.addEventListener('scroll', function () {
         if (window.innerWidth < 768) {
             navelements.classList.remove('show');
+            hamburger.classList.remove('active');
         }
     });
 
@@ -70,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const originalText = sendBtn.textContent;
             sendBtn.textContent = 'Sending...';
 
-            //Replace with your Service ID and Template ID
             emailjs.sendForm('service_dmgzjrf', 'template_8ss2xpb', contactForm)
                 .then(() => {
                     alert('Message sent successfully!');
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+  
     // Footer Year Update
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
