@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohit Kumar</title>
-    <link rel="icon" href="/Images/apple-touch-icon.png" type="image/x-icon">
+    <link rel="icon" href="/Images/apple-touch-iconn.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
      
@@ -33,7 +33,6 @@
         </nav>
     </header>
 <!-- Header Section Ends -->
-
 <!-- Home Section Starts -->
     <section class="home-section" id="home">
         <div class="home-content">
@@ -45,7 +44,6 @@
         </div>
     </section>
 <!-- Home Section Ends -->
-
 <!-- About Section Starts -->
     <section  id="about" class="about-section" >
         <h1 class="heading" >About me</h1>
@@ -82,7 +80,6 @@
         </div>
     </section>
 <!-- About Section Ends -->
-
 <!-- Project Section Starts -->
     <section id="project">
         <h2 class="heading">My Projects</h2>
@@ -131,7 +128,6 @@
         </div>
     </section>
 <!-- Project Section Starts -->
-
 <!-- Contact Section Starts-->
 <section id="contact">
     <h1 class="heading">Contact Me</h1>
@@ -159,7 +155,6 @@
 </form> 
 </section>
 <!-- Contact Section Ends-->
-
 <!--Footer section starts-->
     <footer>
         <div class="social-links">
@@ -173,8 +168,16 @@
     </footer>
     
     <!-- Footer Section Ends-->
-
-    <!-- Include the EmailJS library -->
+<!-- Mobile View Popup -->
+<button id="mobileViewBtn" class="mobile-view-btn">📱 Mobile View</button>
+<div id="mobilePopup" class="mobile-popup">
+    <div class="mobile-popup-content">
+        <span id="closePopup" class="close-btn">&times;</span>
+        <iframe src="index.html" class="mobile-iframe"></iframe>
+    </div>
+</div>
+<!-- Mobile View Popup Ends-->
+<!-- Include the EmailJS library -->
     <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">

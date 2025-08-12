@@ -1,5 +1,45 @@
+
+//Prevent Inspect
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+document.addEventListener('keydown', function (e) {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && e.key === "U")
+    ) {
+        e.preventDefault();
+    }
+});
+
+// JS CODE START -->
 document.addEventListener('DOMContentLoaded', function () {
     emailjs.init('N9NGr9cZ4-tx16iTh');
+
+// //Mobile POP UP
+    const mobileBtn = document.getElementById("mobileViewBtn");
+    const mobilePopup = document.getElementById("mobilePopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    mobileBtn.addEventListener("click", () => {
+        mobilePopup.style.display = "flex";
+        
+    });
+    closeBtn.addEventListener("click", () => {
+        mobilePopup.style.display = "none";
+    });
+    mobilePopup.addEventListener("click", (e) => {
+        if (e.target === mobilePopup) {
+            mobilePopup.style.display = "none";
+        }
+    });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            mobilePopup.style.display = "none";
+        }
+    });
+
 
     // Hamburger functionality
     const hamburger = document.getElementById('hamburger');
